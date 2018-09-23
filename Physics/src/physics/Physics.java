@@ -52,6 +52,51 @@ public class Physics {
                 formulas[2]++;
             }       
             
+            if (variables[i].equals("sumF") || variables[i].equals("m") || variables[i].equals("a"))
+            {
+                formulas[3]++;
+            }
+            
+            if (variables[i].equals("F") || variables[i].equals("mu") || variables[i].equals("N"))
+            {
+                formulas[4]++;
+            }
+            
+            if (variables[i].equals("a") || variables[i].equals("v") || variables[i].equals("r"))
+            {
+                formulas[5]++;
+            }
+            
+            if (variables[i].equals("tau") || variables[i].equals("r") || variables[i].equals("F") || variables[i].equals("theta"))
+            {
+                formulas[6]++;
+            }
+            
+            if (variables[i].equals("p") || variables[i].equals("m") || variables[i].equals("v"))
+            {
+                formulas[7]++;
+            }
+            
+            if (variables[i].equals("J") || variables[i].equals("F") || variables[i].equals("deltat"))
+            {
+                formulas[8]++;
+            }
+            
+            if (variables[i].equals("K") || variables[i].equals("m") || variables[i].equals("v"))
+            {
+                formulas[9]++;
+            }
+            
+            if (variables[i].equals("deltaU") || variables[i].equals("m") || variables[i].equals("g") || variables[i].equals("h"))
+            {
+                formulas[10]++;
+            }
+            
+            if (variables[i].equals("W") || variables[i].equals("F") || variables[i].equals("deltar") || variables[i].equals("theta"))
+            {
+                formulas[11]++;
+            }
+            
             if (variables[i].equals("P_avg") || variables[i].equals("W") || variables[i].equals("deltat")) {
                 formulas[12]++;
             }
@@ -103,6 +148,42 @@ public class Physics {
             System.out.println("v^2 = v0^2 + 2a(x - x0)");
         }
         
+        if (formulas[3] == 2) {
+            System.out.println("sigmaF = ma");
+        }
+        
+        if (formulas[4] == 2) {
+            System.out.println("F_fric <= muN");
+        }
+        
+        if (formulas[5] == 2) {
+            System.out.println("a_c = v^2/r");
+        }
+        
+        if (formulas[6] == 3) {
+            System.out.println("t = rF sin(theta)");
+        }
+        
+        if (formulas[7] == 2) {
+            System.out.println("p = mv");
+        }
+        
+        if (formulas[8] == 2) {
+            System.out.println("J = Fdeltat");
+        }
+        
+        if (formulas[9] == 2) {
+            System.out.println("K = 1/2mv^2");
+        }
+        
+        if (formulas[10] == 3) {
+            System.out.println("deltaU = mgh");
+        }
+        
+        if (formulas[11] == 3) {
+            System.out.println("W = Fdeltarcos(theta)");
+        }
+        
         if (formulas[12] == 2) {
             System.out.println("P_avg = W / Δt");
         }
@@ -144,7 +225,7 @@ public class Physics {
                 && formulas[10] != 3 && formulas[11] != 3 && formulas[12] != 2 && formulas[13] != 3 && formulas[14] != 2
                 && formulas[15] != 2 && formulas[16] != 2 && formulas[17] != 2 && formulas[18] != 1 && formulas[19] != 4
                 && formulas[20] != 4) {
-            System.out.println("No formulas exist with the given variables");
+            System.out.println("No solutions exist with the given variables");
         }
         
     }
