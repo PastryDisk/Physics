@@ -1,21 +1,37 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package physics;
+import java.util.*;
 
-/**
- *
- * @author jakob
- */
 public class Physics {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.print("Please enter the amount of variables you have:");
+        
+        int amount = scan.nextInt();
+        
+        String[] vars = new String[amount];
+        
+        System.out.println("Enter the variables below");
+        
+        for (int i=1; i <= amount; i++)
+        {
+            Scanner scann = new Scanner(System.in);
+            
+            System.out.print("Variable " + i + ":");
+            
+            String v = scann.nextLine();
+            
+            vars[i-1] = v;
+        }
+        
+        for (int i = 0; i < vars.length; i++)
+        {
+            System.out.println(vars[i]);
+        }
+        
+        
     }
     
 }
